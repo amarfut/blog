@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% if page.tag %}
+
+    <h5>Posts related to: {{ page.tag }}</h5>
+
+    {% for post in site.tags[page.tag] %}
+    <span class="post-meta">{{ post.publishdate }}</span> | <span class="post-meta">0 Комментариев</span>
+    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>                    
+    <p style="font-size:16px;">{{post.preview}}</p>
+    {% for tag in post.tags %}
+    <span class="badge">{{ tag }}</span>
+    {% endfor %}
+    <br/>
+    <hr />
+    {% endfor %}
+
+{% else %}
+
+    {% for post in site.posts %}
+    <span class="post-meta">{{ post.publishdate }} | 0 Комментариев</span> 
+    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>                    
+    <p style="font-size:16px;">{{post.preview}}</p>
+    {% for tag in post.tags %}
+    <span class="badge">{{ tag }}</span>
+    {% endfor %}
+    <br/>
+    <hr />
+    {% endfor %}
+
+{% endif %}

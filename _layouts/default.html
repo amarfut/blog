@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+    <style>
+    .header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  margin-top: 20px;
+  color: #999
+}
+
+.p {
+  text-align: center;
+  padding-top: 120px;
+}
+
+.p a {
+  text-decoration: underline;
+  color: blue;
+}
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      
+      <!--  Header Section-->
+      <div class="row header">
+        <div class="col-sm-12" style="padding:10px;">
+          <a href="/">
+            <img src="/assets/cowboy.png"/>            
+          </a>
+        </div>
+      </div>
+      
+
+      <!--  Content Area-->
+      <div class="row content">
+        <div class="col-sm-3" style="font-size:17px;">
+
+          {% for tag in site.tags %}
+          {% capture tag_name %}{{ tag | first }}{% endcapture %}
+          <span><a href="/tags/{{ tag_name }}">{{ tag_name }}</a></span>
+          ({{site.tags[tag_name].size}}) 
+          {% endfor %}
+         
+          <br/> 
+        
+          <br/><b>about</b>
+          <br/>
+          <p style="font-size:11px; font-family:Verdana; color:rgb(109, 109, 109); ">
+            Блог c любовью создан и поддерживается программистом для программистов.
+            По любым вопросам писать на my@email.com
+          </p>
+
+        </div>
+        <div class="col-sm-9">
+          {{ content }}
+        </div>
+      </div>
+      
+      
+    </div>
+    
+
+    </div>
+    
+    
+
+    
+  
+
+  </body>
+
+</html>
