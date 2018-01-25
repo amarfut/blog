@@ -12,8 +12,8 @@ Boxing occurs everywhere when we need a reference type to a value type. Here is 
 <span class="ValueType">int</span>&nbsp;number&nbsp;=&nbsp;123;&nbsp;&nbsp;<br />
 <span class="ReferenceType">object</span>&nbsp;boxed&nbsp;=&nbsp;number;
 </div>
-
-But what about another cases that are not so obvious? Let’s consider them.
+<p>
+But what about another cases that are not so obvious? Let’s consider them.</p>
 '
 ---
 
