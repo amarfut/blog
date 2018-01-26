@@ -67,37 +67,37 @@ Boxing occurs everywhere when we need a reference type to a value type. Here is 
 </div>
 
 
-<h3>#1 Converting value type to System.Object type:</h3>
+<h4>#1 Converting value type to System.Object type:</h4>
 
 <div class="code">
 <span class="ReferenceType">object</span>&nbsp;number&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;Number();
 </div>
 
-<h3>#2 Converting value type to System.ValueType type:</h3>
+<h4>#2 Converting value type to System.ValueType type:</h4>
 
 <div class="code">
 System.ValueType&nbsp;number&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;Number();
 </div>
 
-<h3>#3 Converting value of enumeration type to System.Enum type:</h3>
+<h4>#3 Converting value of enumeration type to System.Enum type:</h4>
 
 <div class="code">
 System.Enum&nbsp;color&nbsp;=&nbsp;Color.GREEN;
 </div>
 
-<h3>#4 Converting value type into interface reference:</h3>
+<h4>#4 Converting value type into interface reference:</h4>
 
 <div class="code">
 IPrintable&nbsp;number&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;Number();
 </div>
 
-<h3>#5 Using value types in C# string concatenation:</h3>
+<h4>#5 Using value types in C# string concatenation:</h4>
 
 <div class="code">
 Action&nbsp;print&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;Number().Print;
 </div>
 
-<h3>#6 Calling Object.GetType method on value types:</h3>
+<h4>#6 Calling Object.GetType method on value types:</h3>
 
 <div class="code">
 Color.BLACK.GetType();<br />
@@ -105,14 +105,14 @@ Color.BLACK.GetType();<br />
 <span class="Keyword">new</span>&nbsp;Number().GetType();
 </div>
 
-<h3>#7 Calling a base class method from a struct:</h3>
+<h4>#7 Calling a base class method from a struct:</h4>
 
 <div class="code">
 <span class="Linq">var</span>&nbsp;number&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;Number();<br />
 <span class="Linq">var</span>&nbsp;str&nbsp;=&nbsp;number.ToString();
 </div>
 
-<h3>#8 Constant patterns under is expression:</h3>
+<h4>#8 Constant patterns under is expression:</h4>
 
 <div class="code">
 <span class="ValueType">int</span>&nbsp;value&nbsp;=&nbsp;1;<br />
@@ -121,6 +121,9 @@ Color.BLACK.GetType();<br />
 }
 </div>
 
+<p>
+Memorizing the examples above doesn’t guarantee you will never get undesirable boxing. It’s important to be quite attentive to every piece of code you write. Also it would be great to check the code in Ildasm or dotPeek tools.
+</p>
 
   
 </article>
