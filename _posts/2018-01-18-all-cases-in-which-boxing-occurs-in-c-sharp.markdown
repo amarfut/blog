@@ -17,9 +17,6 @@ But what about another cases that are not so obvious? Let’s consider them.</p>
 '
 ---
 
-
-<article>
-
 <p>
   This article is just quick recap of majority of cases in which boxing occurs in C#6.0 or higher.
 </p>
@@ -125,5 +122,4 @@ Color.BLACK.GetType();<br />
 Memorizing the examples above doesn’t guarantee you will never get undesirable boxing. It’s important to be quite attentive to every piece of code you write. Also it would be great to check the code in Ildasm or dotPeek tools.
 </p>
 
-  
-</article>
+
