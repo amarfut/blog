@@ -94,7 +94,7 @@ IPrintable&nbsp;number&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;Number(
 Action&nbsp;print&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;Number().Print;
 </div>
 
-<h4>#6 Calling Object.GetType method on value types:</h3>
+<h4>#6 Calling Object.GetType method on value types:</h4>
 
 <div class="code">
 Color.BLACK.GetType();<br />
