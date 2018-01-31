@@ -61,7 +61,9 @@ Implementing Template Method Design Pattern in C#
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">private</span>&nbsp;ValidationResult&nbsp;IsFileEmpty()<br />
 &nbsp;&nbsp;&nbsp;&nbsp;{<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;_fileInfo.Length&nbsp;&gt;&nbsp;0&nbsp;?&nbsp;<span class="Keyword">new</span>&nbsp;ValidationResult()&nbsp;:&nbsp;<span class="Keyword">new</span>&nbsp;ValidationResult(<span class="String">"The&nbsp;proposed&nbsp;file&nbsp;content&nbsp;is&nbsp;empty."</span>);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;_fileInfo.Length&nbsp;&gt;&nbsp;0&nbsp;?&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Keyword">new</span>&nbsp;ValidationResult()&nbsp;:&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Keyword">new</span>&nbsp;ValidationResult(<span class="String">"The&nbsp;proposed&nbsp;file&nbsp;content&nbsp;is&nbsp;empty."</span>);<br />
 &nbsp;&nbsp;&nbsp;&nbsp;}<br />
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">protected</span>&nbsp;<span class="Modifier">abstract</span>&nbsp;ValidationResult&nbsp;IsFileSizeValid();<br />
