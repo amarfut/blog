@@ -6,7 +6,7 @@ tags: [csharp, designpatterns]
 permalink: implementing-template-method-design-pattern-in-csharp
 preview: 'The Template Method Design Pattern holds the general algorithm in a base class and allows the subclasses to implement some certain steps of that algorithm. This pattern can be used anytime you have a few similar algorithms that differ by some steps.'
 ---
-<div style="font-family:Verdana; font-size:14px;">
+<div class="art-content">
  
 
 The Template Method Design Pattern holds the general algorithm in a base class and allows the subclasses to implement some certain steps of that algorithm. This pattern can be used anytime you have a few similar algorithms that differ by some steps.
