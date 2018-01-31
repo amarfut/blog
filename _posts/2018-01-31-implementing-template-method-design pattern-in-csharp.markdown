@@ -6,6 +6,7 @@ tags: [csharp, designpatterns]
 permalink: implementing-template-method-design-pattern-in-csharp
 preview: 'The Template Method Design Pattern holds the general algorithm in a base class and allows the subclasses to implement some certain steps of that algorithm. This pattern can be used anytime you have a few similar algorithms that differ by some steps.'
 ---
+
 <p>
 The Template Method Design Pattern holds the general algorithm in a base class and allows the subclasses to implement some certain steps of that algorithm. This pattern can be used anytime you have a few similar algorithms that differ by some steps.
  <br/><br/>
@@ -25,9 +26,12 @@ Validation for images:<br/>
   <li>User should see "The proposed file content is empty." error message at attempt to upload empty file.<br/></li>
  <li> User should see "The file size is less than 1 MB" error message at attempt to upload file less than 1 MB.<br/></li>
   <li>User should see "The file size is greater than 10 MB" error message at attempt to upload file greater than 10 MB.<br/></li>
+
+</ul>
  </i>
 </p>
-</ul>
+
+
 
 <h4>Step #1: Preparing ValidationResult class</h4>
 <div class="code">
