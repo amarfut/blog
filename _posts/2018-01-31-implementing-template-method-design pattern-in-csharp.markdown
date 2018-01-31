@@ -7,7 +7,7 @@ permalink: implementing-template-method-design-pattern-in-csharp
 preview: 'Implementing Template Method Design Pattern in C#'
 ---
 <p>
-The Template Method allows to define a skeleton of an algorithm in a base class and allow subclasses to redefine certain steps. This pattern can be used anytime you have a few similar algorithms that differ by some steps.
+The Template Method Design Pattern holds some general algorithm in a base class and allow the subclasses to implement or redefine some certain steps of that algorithm. This pattern can be used anytime you have a few similar algorithms that differ by some steps.
 </p>
 
 <h4>Step #1: Preparing ValidationResult class</h4>
