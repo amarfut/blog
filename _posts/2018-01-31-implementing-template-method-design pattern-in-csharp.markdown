@@ -97,6 +97,9 @@ Validate method (our template method) is calling IsFileEmpty and IsFileSizeValid
 &nbsp;&nbsp;&nbsp;&nbsp;}<br />
 }
 </div>
+<p>
+We've defined TextFileValidator class and implemented IsFileSizeValid according to requirements we have.
+</p>
 
 <h4>Step #4: Implementing ImageFileValidator class</h4>
 <div class="code">
