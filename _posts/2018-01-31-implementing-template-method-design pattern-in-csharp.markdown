@@ -76,7 +76,9 @@ Nothing interesting here. We've defined ValidationResult class that will represe
 }
 </div>
 <p>
-Validate method (our template method) is calling IsFileEmpty and IsFileSizeValid one by one. IsFileEmpty simply checks whether file has at least one byte inside. IsFileEmpty should work in the same way for all file types, so that's why it is placed in a base class.
+Validate method (our template method) is calling IsFileEmpty and IsFileSizeValid one by one. In the real world there would be much more other methods (IsFileNamevalid, IsExtensionValid etc) but for this example we will proceed with these two ones only.
+
+<br/><br/>IsFileEmpty simply checks whether file has at least one byte inside. IsFileEmpty should work in the same way for all file types, so that's why it is placed in a base class.
 But according to our requirments behaviour of IsFileSizeValid method should differ for text files and images, so we've marked it as abstract.
 </p>
 
