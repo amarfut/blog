@@ -131,6 +131,9 @@ We've defined TextFileValidator class and implemented IsFileSizeValid according 
 &nbsp;&nbsp;&nbsp;&nbsp;}<br />
 }
 </div>
+<p>
+  We've also defined ImageFileValidator class and implemented IsFileSizeValid. The method has a one more additional condition to check minimum file size.
+ </p>
 
 <h4>Step #5: Usage</h4>
 <div class="code">
