@@ -6,7 +6,8 @@ tags: [csharp, designpatterns]
 permalink: implementing-template-method-design-pattern-in-csharp
 preview: 'The Template Method Design Pattern holds the general algorithm in a base class and allows the subclasses to implement some certain steps of that algorithm. This pattern can be used anytime you have a few similar algorithms that differ by some steps.'
 ---
-
+<div>
+ 
 
 The Template Method Design Pattern holds the general algorithm in a base class and allows the subclasses to implement some certain steps of that algorithm. This pattern can be used anytime you have a few similar algorithms that differ by some steps.
  <br/>
@@ -176,3 +177,7 @@ We've defined TextFileValidator class and implemented IsFileSizeValid according 
 <p>
   Usage is quite simple. Just don't forget to put an appropriate file in your Debug folder. 
  </p>
+
+
+
+ </div>
