@@ -26,6 +26,10 @@ Validation for text files:</i>
   <li>User should see "The file size is greater than 10 MB" error message at attempt to upload file greater than 10 MB.<br/></li>
 </ul>
 
+<p>
+ From the requirments above ...
+ </p>
+
 <h4>Step #1: Preparing ValidationResult class</h4>
 <div class="code">
 <span class="Modifier">public</span>&nbsp;<span class="ReferenceType">class</span>&nbsp;ValidationResult<br />
