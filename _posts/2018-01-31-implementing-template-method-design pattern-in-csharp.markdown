@@ -4,10 +4,10 @@ title:  "Implementing Template Method Design Pattern in C#"
 publishdate:   "Wednesday, 31 January 2018"
 tags: [csharp, designpatterns]
 permalink: implementing-template-method-design-pattern-in-csharp
-preview: 'Implementing Template Method Design Pattern in C#'
+preview: 'The Template Method Design Pattern holds the general algorithm in a base class and allows the subclasses to implement some certain steps of that algorithm. This pattern can be used anytime you have a few similar algorithms that differ by some steps.'
 ---
 <p>
-The Template Method Design Pattern holds some general algorithm in a base class and allow the subclasses to implement or redefine some certain steps of that algorithm. This pattern can be used anytime you have a few similar algorithms that differ by some steps.
+The Template Method Design Pattern holds the general algorithm in a base class and allows the subclasses to implement some certain steps of that algorithm. This pattern can be used anytime you have a few similar algorithms that differ by some steps.
 </p>
 
 <h4>Step #1: Preparing ValidationResult class</h4>
@@ -30,7 +30,7 @@ The Template Method Design Pattern holds some general algorithm in a base class 
 }
 </div>
 <p>
-Nothing interesting here. We've defined ValidationResult class that will represent the result of validation. It can be successful or unsuccessful with some error message.
+Nothing interesting here. We've defined ValidationResult class that will represent the result of the validation. It can be successful or unsuccessful with some error message.
 </p>
 
 
@@ -76,9 +76,9 @@ Nothing interesting here. We've defined ValidationResult class that will represe
 }
 </div>
 <p>
-Validate method (our template method) is calling IsFileEmpty and IsFileSizeValid one by one. In the real world there would be much more other methods (IsFileNameValid, IsExtensionValid etc) but in this example we will proceed only with these two ones.
-
-<br/><br/>IsFileEmpty must work in the same way for all file types, because it simply checks whether file has at least one byte inside. Thats why this method is placed in a base class. But IsFileSizeValid method (certain step of template method that will be implemented by subclass) must behave differently for every file type. That's why it's abstract. We allow every future subclass to implement the method in it's own way.
+Validate method (our template method) is calling IsFileEmpty and IsFileSizeValid one by one. In the real world, there would be much more other methods (IsFileNameValid, IsExtensionValid etc.) but in this example we will proceed only with these two ones.
+<br/><br/>
+ IsFileEmpty must work in the same way for all file types, because it simply checks whether a file has at least one byte inside. That's why this method is placed in a base class. But IsFileSizeValid method (certain step of template method that will be implemented by subclass) must behave differently for every file type. That's why it's abstract. We allow every future subclass to implement the method in its own way.
 </p>
 
 <h4>Step #3: Implementing TextFileValidator class</h4>
