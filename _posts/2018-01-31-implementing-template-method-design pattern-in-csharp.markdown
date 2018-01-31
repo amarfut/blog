@@ -69,3 +69,53 @@ Implementing Template Method Design Pattern in C#
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">protected</span>&nbsp;<span class="Modifier">abstract</span>&nbsp;ValidationResult&nbsp;IsFileSizeValid();<br />
 }
 </div>
+
+<h4>Step #3: Implementing TextFileValidator class</h4>
+<div class="code">
+<span class="Modifier">public</span>&nbsp;<span class="ReferenceType">class</span>&nbsp;TextFileValidator&nbsp;:&nbsp;BaseValidator<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">public</span>&nbsp;TextFileValidator(FileInfo&nbsp;fileInfo)&nbsp;:&nbsp;<span class="Keyword">base</span>(fileInfo)&nbsp;{&nbsp;}<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">private</span>&nbsp;<span class="Modifier">const</span>&nbsp;<span class="ValueType">int</span>&nbsp;MAX_FILE_SIZE_BYTES&nbsp;=&nbsp;1048576;<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">protected</span>&nbsp;<span class="Modifier">override</span>&nbsp;ValidationResult&nbsp;IsFileSizeValid()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;_fileInfo.Length&nbsp;&lt;=&nbsp;MAX_FILE_SIZE_BYTES&nbsp;?<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Keyword">new</span>&nbsp;ValidationResult()&nbsp;:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Keyword">new</span>&nbsp;ValidationResult(<span class="String">"The&nbsp;file&nbsp;size&nbsp;is&nbsp;greater&nbsp;than&nbsp;1&nbsp;MB"</span>);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div>
+
+<h4>Step #4: Implementing ImageFileValidator class</h4>
+<div class="code">
+<span class="Modifier">public</span>&nbsp;<span class="ReferenceType">class</span>&nbsp;ImageFileValidator&nbsp;:&nbsp;BaseValidator<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">public</span>&nbsp;ImageFileValidator(FileInfo&nbsp;fileInfo)&nbsp;:&nbsp;<span class="Keyword">base</span>(fileInfo)&nbsp;{&nbsp;}<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">private</span>&nbsp;<span class="Modifier">const</span>&nbsp;<span class="ValueType">int</span>&nbsp;MIN_FILE_SIZE_BYTES&nbsp;=&nbsp;1048576;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">private</span>&nbsp;<span class="Modifier">const</span>&nbsp;<span class="ValueType">int</span>&nbsp;MAX_FILE_SIZE_BYTES&nbsp;=&nbsp;10485760;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">protected</span>&nbsp;<span class="Modifier">override</span>&nbsp;ValidationResult&nbsp;IsFileSizeValid()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ValidationResult&nbsp;result&nbsp;=&nbsp;<span class="Keyword">null</span>;<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(_fileInfo.Length&nbsp;&lt;&nbsp;MIN_FILE_SIZE_BYTES)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;ValidationResult(<span class="String">"The&nbsp;file&nbsp;size&nbsp;is&nbsp;less&nbsp;than&nbsp;1&nbsp;MB"</span>);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">else</span>&nbsp;<span class="Statement">if</span>&nbsp;(_fileInfo.Length&nbsp;&gt;&nbsp;MAX_FILE_SIZE_BYTES)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;ValidationResult(<span class="String">"The&nbsp;file&nbsp;size&nbsp;is&nbsp;greater&nbsp;than&nbsp;1&nbsp;MB"</span>);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">else</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;ValidationResult();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;result;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div>
+
+<h4>Step #5: Usage</h4>
