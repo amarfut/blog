@@ -24,7 +24,7 @@ Validation for images:<br/>
 </i>
 
 <p>
- From the requirments above ...
+This task looks like a good candidate to be implemented using Template Method pattern. Let's begin!
  </p>
  
 
