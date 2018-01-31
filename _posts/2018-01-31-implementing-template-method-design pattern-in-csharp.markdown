@@ -75,6 +75,10 @@ Nothing interesting here. We've defined ValidationResult class that will represe
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">protected</span>&nbsp;<span class="Modifier">abstract</span>&nbsp;ValidationResult&nbsp;IsFileSizeValid();<br />
 }
 </div>
+<p>
+Validate method (our template method) is calling IsFileEmpty and IsFileSizeValid one by one. IsFileEmpty simply checks whether file has at least one byte inside. IsFileEmpty should work in the same way for all file types, so that's why it is placed in a base class.
+But according to our requirments behaviour of IsFileSizeValid method should differ for text files and images, so we've marked it as abstract.
+</p>
 
 <h4>Step #3: Implementing TextFileValidator class</h4>
 <div class="code">
