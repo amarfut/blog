@@ -13,16 +13,16 @@ The Template Method Design Pattern holds the general algorithm in a base class a
 Imagine that we've got the following requirments from customer:<br/>
  
 <i style="font-size:13px;">
- <br/>The system needs to validate text files and images. <br/>
+The system needs to validate text files and images. <br/>
   
-Validation for text files:<br/>
+Validation for text files:
 <ul>
  <li>User should see "The proposed file content is empty." error message at attempt to upload empty file.<br/></li>
  <li> User should see "The file size is greater than 1 MB" error message for text files at attempt to upload file greater than 1 MB.<br/></li>
  </ul>
  
  
-Validation for images:<br/>
+Validation for images:
 <ul>
   <li>User should see "The proposed file content is empty." error message at attempt to upload empty file.<br/></li>
   <li>User should see "The file size is less than 1 MB" error message at attempt to upload file less than 1 MB.<br/></li>
