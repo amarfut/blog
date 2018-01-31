@@ -24,8 +24,7 @@ Validation for images:
   <li>User should see "The proposed file content is empty." error message at attempt to upload empty file.<br/></li>
   <li>User should see "The file size is less than 1 MB" error message at attempt to upload file less than 1 MB.<br/></li>
   <li>User should see "The file size is greater than 10 MB" error message at attempt to upload file greater than 10 MB.<br/></li>
-</ul>
-</i>
+</ul></i>
 
 <h4>Step #1: Preparing ValidationResult class</h4>
 <div class="code">
