@@ -177,7 +177,9 @@ We've defined TextFileValidator class and implemented IsFileSizeValid according 
 <p>
   Usage is quite simple. Just don't forget to put an appropriate file in your Debug folder. 
  </p>
-
+<p>
+ In our particular example Template Method helped us to avoid code duplication. 
+ </p>
 
 
  </div>
