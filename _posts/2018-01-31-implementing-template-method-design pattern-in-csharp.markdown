@@ -29,6 +29,10 @@ The Template Method allows to define a skeleton of an algorithm in a base class 
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">public</span>&nbsp;<span class="ReferenceType">string</span>&nbsp;ErrorMessage&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}<br />
 }
 </div>
+<p>
+Nothing interesting here. We've defined ValidationResult class that will represent the result of validation. It can be successful or unsuccessful with some error message.
+</p>
+
 
 <h4>Step #2: Implementing BaseValidator class</h4>
 <div class="code">
