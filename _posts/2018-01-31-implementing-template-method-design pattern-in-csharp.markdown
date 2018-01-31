@@ -10,19 +10,23 @@ preview: 'The Template Method Design Pattern holds the general algorithm in a ba
 The Template Method Design Pattern holds the general algorithm in a base class and allows the subclasses to implement some certain steps of that algorithm. This pattern can be used anytime you have a few similar algorithms that differ by some steps.
  <br/><br/>
 Imagine that we've got the following requirments from customer:<br/>
-<i>
+<i style="font-size:11px;">
 The system needs to validate text files and images. <br>
   
 Validation for text files:<br/>
- User should see "The proposed file content is empty." error message at attempt to upload empty file.<br/>
- User should see "The file size is greater than 1 MB" error message for text files at attempt to upload file greater than 1 MB.<br/>
+<ul>
+ <li>User should see "The proposed file content is empty." error message at attempt to upload empty file.<br/></li>
+<li> User should see "The file size is greater than 1 MB" error message for text files at attempt to upload file greater than 1 MB.<br/></li>
+ </ul>
  
+ <ul>
 Validation for images:<br/>
-  User should see "The proposed file content is empty." error message at attempt to upload empty file.<br/>
-  User should see "The file size is less than 1 MB" error message at attempt to upload file less than 1 MB.<br/>
-  User should see "The file size is greater than 10 MB" error message at attempt to upload file greater than 10 MB.<br/>
+  <li>User should see "The proposed file content is empty." error message at attempt to upload empty file.<br/></li>
+ <li> User should see "The file size is less than 1 MB" error message at attempt to upload file less than 1 MB.<br/></li>
+  <li>User should see "The file size is greater than 10 MB" error message at attempt to upload file greater than 10 MB.<br/></li>
  </i>
 </p>
+</ul>
 
 <h4>Step #1: Preparing ValidationResult class</h4>
 <div class="code">
